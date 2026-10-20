@@ -23,6 +23,15 @@ wp-content/advanced-cache.php
 wp-content/wp-cache-config.php
 
 # ==============================================================================
+# Plugins Policy: Ignore 3rd-party plugins; track only custom plugins
+# ==============================================================================
+wp-content/plugins/*
+!wp-content/plugins/index.php
+# Whitelist custom plugins (e.g. prefixed with 'amannex-' or add specific folder names)
+!wp-content/plugins/amannex-*/
+!wp-content/plugins/custom-*/
+
+# ==============================================================================
 # Secrets, Environment & Logs
 # ==============================================================================
 wp-config.php

@@ -18,6 +18,8 @@ The headless WordPress backend and content management system powering the **Aman
 ```text
 amannex-backend/
 ├── wp-content/
+│   ├── plugins/                         # Custom plugins (3rd-party ignored)
+│   │   └── index.php
 │   └── themes/
 │       └── amannex/
 │           ├── inc/
@@ -25,9 +27,9 @@ amannex-backend/
 │           ├── functions.php            # Theme setup & REST API extensions
 │           ├── style.css                # Theme metadata
 │           └── screenshot.png
-├── wp-admin/                            # WordPress Core Admin
-├── wp-includes/                         # WordPress Core Includes
-├── .gitignore                           # Git ignore rules for secrets, uploads & logs
+├── wp-admin/                            # WordPress Core (ignored in Git)
+├── wp-includes/                         # WordPress Core (ignored in Git)
+├── .gitignore                           # Git ignore rules for core, secrets, uploads & 3rd-party plugins
 └── README.md
 ```
 
@@ -54,6 +56,10 @@ Dedicated editor meta box for managing portfolio metadata:
 | Role | `project_role` | Developer / Designer role |
 | Timeline | `project_year` | Completion year or timeframe |
 | Featured Project | `featured_project` | Toggle to feature on portfolio homepage |
+
+### 4. Plugins Policy
+- **Custom-Made Plugins**: Allowed and tracked in Git. Place your custom plugins inside `wp-content/plugins/` (e.g. `wp-content/plugins/amannex-helper/`).
+- **3rd-Party Plugins**: **DO NOT** commit 3rd-party plugins from WordPress.org (e.g. Yoast, WooCommerce, WPGraphQL). They are ignored by `.gitignore` to prevent repository bloat and diff conflicts. Install them through the WordPress Admin dashboard or WP-CLI, and list any dependencies in this README.
 
 ---
 
