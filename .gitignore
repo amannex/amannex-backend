@@ -1,0 +1,69 @@
+# ==============================================================================
+# WordPress Environment & Credentials (Critical Security)
+# ==============================================================================
+wp-config.php
+.env
+.env.*
+!.env.example
+
+# ==============================================================================
+# WordPress Uploads, Cache & Generated Content
+# ==============================================================================
+wp-content/uploads/
+wp-content/blogs.dir/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/backups/
+wp-content/cache/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+
+# ==============================================================================
+# Logs & Debugging
+# ==============================================================================
+*.log
+wp-content/debug.log
+error_log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ==============================================================================
+# Server Config & Sitemaps
+# ==============================================================================
+.htaccess
+sitemap.xml
+sitemap.xml.gz
+
+# ==============================================================================
+# OS Generated Files (macOS & Windows)
+# ==============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ==============================================================================
+# IDE & Code Editor Files
+# ==============================================================================
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# ==============================================================================
+# Dependencies (if Composer or npm are used in themes/plugins)
+# ==============================================================================
+node_modules/
+vendor/
