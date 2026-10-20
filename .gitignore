@@ -1,42 +1,40 @@
 # ==============================================================================
-# WordPress Environment & Credentials (Critical Security)
+# Ignore WordPress Core & Root Files (Track only wp-content)
+# ==============================================================================
+/*
+
+# Whitelist repository documentation & config
+!/.gitignore
+!/README.md
+
+# Whitelist wp-content directory
+!/wp-content/
+
+# ==============================================================================
+# Ignore Media, Uploads, Cache & Generated Content inside wp-content
+# ==============================================================================
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backups/
+wp-content/backup-db/
+wp-content/blogs.dir/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+
+# ==============================================================================
+# Secrets, Environment & Logs
 # ==============================================================================
 wp-config.php
 .env
 .env.*
 !.env.example
-
-# ==============================================================================
-# WordPress Uploads, Cache & Generated Content
-# ==============================================================================
-wp-content/uploads/
-wp-content/blogs.dir/
-wp-content/upgrade/
-wp-content/backup-db/
-wp-content/backups/
-wp-content/cache/
-wp-content/advanced-cache.php
-wp-content/wp-cache-config.php
-
-# ==============================================================================
-# Logs & Debugging
-# ==============================================================================
 *.log
 wp-content/debug.log
 error_log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # ==============================================================================
-# Server Config & Sitemaps
-# ==============================================================================
-.htaccess
-sitemap.xml
-sitemap.xml.gz
-
-# ==============================================================================
-# OS Generated Files (macOS & Windows)
+# OS & Editor Files
 # ==============================================================================
 .DS_Store
 .DS_Store?
@@ -46,24 +44,9 @@ sitemap.xml.gz
 ehthumbs.db
 Thumbs.db
 Desktop.ini
-
-# ==============================================================================
-# IDE & Code Editor Files
-# ==============================================================================
 .vscode/
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
 .idea/
-*.sublime-project
-*.sublime-workspace
 *.swp
-*.swo
 *~
-
-# ==============================================================================
-# Dependencies (if Composer or npm are used in themes/plugins)
-# ==============================================================================
 node_modules/
 vendor/
